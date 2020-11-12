@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap");
+
+body {
+  height: 100%;
+  width: 1440px;
+  color: hsl(238, 29%, 16%);
+  background-repeat: no-repeat;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat
+    center center fixed;
+  background-size: cover;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.pattern-desktop {
+  width: 30%;
+  position: absolute;
+  z-index: 1;
+  left: 19%;
+}
+
+.woman {
+  width: 30%;
+  position: absolute;
+  z-index: 1;
+  left: 19%;
+}
+
+.cubicle {
+  left: 20%;
+  position: absolute;
+  width: 113px;
+  top: 179px;
+  z-index: 3;
+}
+
+.card {
+  width: 60%;
+  margin: auto auto;
+  background-color: aliceblue;
+  padding-left: 483px;
+  height: 450px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+.faq {
+  text-align: center;
+  font-weight: bold;
+  position: relative;
+  top: 7px;
+}
+
+.flex {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  padding-right: 55px;
+  height: 50%;
+}
+
+.line-divided {
+  width: 100%;
+}
+
+.title {
+  color: hsl(237, 12%, 33%);
+}
+
+article {
+  font-size: 12px;
+  display: none;
+}
