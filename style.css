@@ -1,72 +1,148 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap");
 
 body {
-  height: 100%;
-  width: 1440px;
+  min-height: 100vh;
+  min-width: 375px;
+  width: 100vw;
   color: hsl(238, 29%, 16%);
-  background-repeat: no-repeat;
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat
-    center center fixed;
+    fixed center center;
   background-size: cover;
   font-family: "Kumbh Sans", sans-serif;
-}
-
-.pattern-desktop {
-  width: 30%;
-  position: absolute;
-  z-index: 1;
-  left: 19%;
-}
-
-.woman {
-  width: 30%;
-  position: absolute;
-  z-index: 1;
-  left: 19%;
-}
-
-.cubicle {
-  left: 20%;
-  position: absolute;
-  width: 113px;
-  top: 179px;
-  z-index: 3;
-}
-
-.card {
-  width: 60%;
-  margin: auto auto;
-  background-color: aliceblue;
-  padding-left: 483px;
-  height: 450px;
   box-sizing: border-box;
-  border-radius: 20px;
+  margin: 0;
+  padding: 8px;
 }
 
-.faq {
-  text-align: center;
-  font-weight: bold;
-  position: relative;
-  top: 7px;
+main {
+  min-height: 70vh;
+  max-height: 90vh;
+  min-width: 320px;
+  width: 90vw;
+  margin: 15vh auto;
+  border-radius: 10px;
+  background-color: aliceblue;
 }
 
-.flex {
+main > div.flex {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-around;
-  padding-right: 55px;
-  height: 50%;
+  flex-direction: column;
+  justify-content: end;
+  margin: 0;
+  padding: 0 4px;
+  box-sizing: inherit;
 }
 
-.line-divided {
-  width: 100%;
+main > div.flex > div.illustration {
+  max-width: 100vw;
+  position: relative;
 }
 
-.title {
+main > div.flex > div.illustration img.cubicle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -40px;
+  left: 20px;
+  z-index: 100;
+}
+
+img.woman {
+  position: absolute;
+  width: 80vmin;
+  max-width: 300px;
+  left: 50%;
+  top: -136px;
+  transform: translateX(-50%);
+  z-index: 99;
+}
+
+img.pattern-desktop {
+  position: absolute;
+  width: 80vmin;
+  max-width: 300px;
+  left: 50%;
+  top: -165px;
+  z-index: 98;
+  transform: translateX(-50%);
+}
+
+main > div.flex h2 {
+  margin-top: 20vh;
+  text-align: center;
+  font-weight: 700;
   color: hsl(237, 12%, 33%);
+  font-size: 2rem;
 }
 
-article {
-  font-size: 12px;
+details summary {
+  list-style: none;
+  font-size: 0.9rem;
+  color: hsl(240, 6%, 50%);
+  margin: 4px;
+}
+
+details summary::marker {
   display: none;
+}
+
+summary:after {
+  border-radius: 15px;
+  content: "\2039";
+  color: hsl(14, 88%, 65%);
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: -6px 10px 0 10px;
+  padding: 1px 0 3px 0;
+  text-align: center;
+  width: 30px;
+  position: absolute;
+  right: 20px;
+  transform: rotatez(270deg);
+}
+
+details[open] summary::after {
+  transform: rotateZ(90deg);
+}
+
+details[open] summary {
+  color: hsl(237, 12%, 33%);
+  font-weight: 700;
+}
+
+details article {
+  font-size: 0.8rem;
+  color: hsl(240, 6%, 50%);
+  line-height: 1.6;
+  margin: 4px;
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    width: 450px;
+  }
+
+  main > div.flex > div.illustration img.cubicle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -40px;
+    left: 65px;
+    z-index: 100;
+  }
+
+  summary:after {
+    border-radius: 15px;
+    content: "\2039";
+    color: hsl(14, 88%, 65%);
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: -6px 10px 0 10px;
+    padding: 1px 0 3px 0;
+    text-align: center;
+    width: 30px;
+    position: absolute;
+    right: unset;
+    transform: rotatez(270deg);
+  }
 }
